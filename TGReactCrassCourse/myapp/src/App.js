@@ -1,15 +1,19 @@
-import logo from './logo.svg';
+
 import './App.css';
 import About from './screens/About';
-import Contact from './Contact';
+import RegisterScreen from './screens/RegisterScreen';
+// import Contact from './Contact';
+// import Title from './components/Title';
 
 function App() {
   return (
     <div>
       
-      <h1>Hello World</h1>
-      <About/>
-      <Contact/>
+      {/* <h1>Hello World</h1> */}
+      {/* <About/> */}
+      <RegisterScreen/>
+      {/* <Title/> */}
+      {/* <Contact/> */}
     </div>
   );
 }
