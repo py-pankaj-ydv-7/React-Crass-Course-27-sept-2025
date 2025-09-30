@@ -1,8 +1,8 @@
 
 import './App.css';
-import About from './screens/About';
-// import RegisterScreen from './screens/RegisterScreen';
-import UserList from './screens/UserList';
+// import About from './screens/About';
+import RegisterScreen from './screens/RegisterScreen';
+// import UserList from './screens/UserList';
 // import Contact from './Contact';
 // import Title from './components/Title';
 
@@ -12,8 +12,8 @@ function App() {
       
       {/* <h1>Hello World</h1> */}
       {/* <About/> */}
-      {/* <RegisterScreen/> */}
-      <UserList/>
+      <RegisterScreen/>
+      {/* <UserList/> */}
       {/* <Title/> */}
       {/* <Contact/> */}
     </div>
