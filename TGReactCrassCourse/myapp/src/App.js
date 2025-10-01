@@ -1,10 +1,11 @@
 
 import './App.css';
 // import About from './screens/About';
-import RegisterScreen from './screens/RegisterScreen';
+// import RegisterScreen from './screens/RegisterScreen';
 // import UserList from './screens/UserList';
 // import Contact from './Contact';
 // import Title from './components/Title';
+import RagisterUsememo from './screens/RagisterUsememo';
 
 function App() {
   return (
@@ -12,10 +13,11 @@ function App() {
       
       {/* <h1>Hello World</h1> */}
       {/* <About/> */}
-      <RegisterScreen/>
+      {/* <RegisterScreen/> */}
       {/* <UserList/> */}
       {/* <Title/> */}
       {/* <Contact/> */}
+      <RagisterUsememo/>
     </div>
   );
 }

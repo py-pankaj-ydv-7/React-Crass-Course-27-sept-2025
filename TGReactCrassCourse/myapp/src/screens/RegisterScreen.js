@@ -6,20 +6,32 @@ function RegisterScreen() {
 
   const [email,setEmail]=useState();// hooks - manage state
   const [password,setPassword]=useState();// hooks - manage state
-  const [age,setAge]=useState();// hooks - manage state
+  const [age,setAge]=useState(13);// hooks - manage state
+
+ 
+    
 
   let handleClick=(e)=>{
-     e.preventDefault();  // Do not Reload the screen on calling this function
-    console.log("Hello World!");
-    
+    e.preventDefault();  // Do not Reload the screen on calling this function
+    console.log("jitu bhai kaam kr rah hai button tum chinta mat!");
   }
-  console.log(email);
-  console.log(password);
+   
+    function increaseAge(e){
+      e.preventDefault();
+    setAge(age+1);
+   }
+  // console.log(email);
+  // console.log(password);
   // setAge(13);// useEffect - it runs on the screen render
 
   useEffect(()=>{
-    setAge(13);
-  },[])
+    // setAge(13);
+    
+    
+    console.log("age: ",age);
+    
+  },[age]); // Dependency array - we provide this with state variables, or any vaiables that are changing in nature, hit a re - render
+  // runs whenever 'age' changes
   
   // let age = 19;
   // let email ="pankajyadav123@gmail.com";
@@ -40,14 +52,17 @@ function RegisterScreen() {
     // </div>
 
     <div>
-      <h1>{age}</h1>
       <form>
+        <div>
+      <h1>{age}</h1>
+      <button onClick={increaseAge }>Increase</button>
         <input type="email" placeholder='enter Email' value={email}
         onChange={(e)=> setEmail(e.target.value)}/>
         <input type="password" placeholder='enter Password' value={password} 
         onChange={(e)=> setPassword(e.target.value)}
         />
         <button onClick={handleClick}>Submit</button>
+        </div>
       </form>
     </div>
     
