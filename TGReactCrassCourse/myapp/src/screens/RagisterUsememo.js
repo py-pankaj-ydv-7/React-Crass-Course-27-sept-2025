@@ -1,4 +1,5 @@
 import React, { useMemo, useState } from 'react'
+import { Link } from 'react-router-dom';
 
 const ExpensiveCalculation = (num) =>{
     console.log("Calculating...");
@@ -33,10 +34,14 @@ function RagisterUsememo() {
             <button onClick={addTodo}>Add Todo</button>
         </div>
         <hr/>
+        <div>
         Count: {count}
         <button onClick={increment}>+</button>
         <h2>Expensive Calculation</h2>
         {calculation}
+        </div>
+        {/* <button >Take Me To User List</button> */}
+        <Link to="/user-list">Take Me To User List Screen</Link>
     </div>
   )
 }

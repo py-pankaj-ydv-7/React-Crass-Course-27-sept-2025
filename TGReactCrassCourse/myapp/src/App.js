@@ -1,11 +1,23 @@
 
 import './App.css';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 // import About from './screens/About';
 // import RegisterScreen from './screens/RegisterScreen';
-// import UserList from './screens/UserList';
+import UserList from './screens/UserList';
 // import Contact from './Contact';
 // import Title from './components/Title';
 import RagisterUsememo from './screens/RagisterUsememo';
+
+const router = createBrowserRouter([
+  {
+    path: "/register",
+    element: <RagisterUsememo/>,
+  },
+  {
+    path: "/user-list",
+    element: <UserList/>,
+  },
+]);
 
 function App() {
   return (
@@ -17,9 +29,11 @@ function App() {
       {/* <UserList/> */}
       {/* <Title/> */}
       {/* <Contact/> */}
-      <RagisterUsememo/>
+      {/*<RagisterUsememo/>*/}
+      <RouterProvider router={router} />
     </div>
   );
 }
 
 export default App;
+
